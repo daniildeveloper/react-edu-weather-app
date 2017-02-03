@@ -1,6 +1,7 @@
 var React = require('react');
 
 var Link = require('react-router').Link;
+var IndexLink = require('react-router').IndexLink;
 
 
 // Link - wrapper for a[href='some'].
@@ -10,9 +11,9 @@ var Nav = React.createClass({
            <nav>
             <div>Nav component</div>
             
-            <Link to="/">Get weather</Link>
-            <Link to="/about">About</Link>
-            <Link to="/examples">Example</Link>
+            <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get weather</IndexLink>
+            <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link>
+            <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Example</Link>
            </nav>
         );
     }

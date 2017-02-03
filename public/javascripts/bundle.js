@@ -26591,6 +26591,7 @@
 	var React = __webpack_require__(2);
 
 	var Link = __webpack_require__(179).Link;
+	var IndexLink = __webpack_require__(179).IndexLink;
 
 	// Link - wrapper for a[href='some'].
 	var Nav = React.createClass({
@@ -26606,18 +26607,18 @@
 	                'Nav component'
 	            ),
 	            React.createElement(
-	                Link,
-	                { to: '/' },
+	                IndexLink,
+	                { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	                'Get weather'
 	            ),
 	            React.createElement(
 	                Link,
-	                { to: '/about' },
+	                { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	                'About'
 	            ),
 	            React.createElement(
 	                Link,
-	                { to: '/examples' },
+	                { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	                'Example'
 	            )
 	        );

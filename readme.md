@@ -1,4 +1,12 @@
-# React edu project. Weather app
+# React edu project. Weather ap.
+
+## Why use Link
+
+Realy simmple ```<a href="#/some">Some</a>``` works fine. But in SPA I need show where am I. Css classes in this case arent usefull. Maintainly  examples: 
+```jsx
+<IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get weather</IndexLink>
+<Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link>
+```
 
 ## Routing
 
