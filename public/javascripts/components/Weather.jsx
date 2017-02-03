@@ -1,4 +1,5 @@
 var React = require("react");
+var API = require("API");
 
 var WeatherForm = require('WeatherForm');
 var WeatherMessage = require('WeatherMessage');
@@ -11,8 +12,13 @@ var Weather = React.createClass({
         }
     },
     handleSearch: function (location) {
-        console.log(location);
-
+        var that = this;
+        API.getTemp(location).then(function (temp) {
+            that.setState({
+                location: location,
+                temp: temp
+            })
+         }, function (err) {console.error(err) });
         this.setState({
             location: location,
             temp: 23
