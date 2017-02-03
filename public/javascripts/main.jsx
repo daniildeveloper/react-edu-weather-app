@@ -4,11 +4,14 @@ var ReactDOM = require('react-dom');
 
 var Route = require('react-router').Route;
 var Router = require('react-router').Router;
-var indexRoute = require('react-router').indexRoute;
+var IndexRoute = require('react-router').IndexRoute;
 var hashHistory = require('react-router').hashHistory;
 
 var Main = require('./components/Main');
 var Nav = require('Nav');
+var Weather = require('Weather');
+var About = require('About');
+var Example = require('Example');
 
 
 var obj = {
@@ -16,9 +19,14 @@ var obj = {
 }
 
 //render element
+// in main path must be main component.
 ReactDOM.render(
   <Router history={hashHistory}>
-    <Route path="/" component={Main}></Route>
+    <Route path="/" component={Main}>
+      <Route path="about"  component={About}/>
+      <Route path='examples' component={Example}/>
+      <IndexRoute component={Weather}/>
+    </Route>
   </Router>,
   document.getElementById('app')
 )

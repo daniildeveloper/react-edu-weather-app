@@ -7,6 +7,7 @@ var Main = React.createClass({
             <section>
                 <Nav />
                 <h2>Main Component</h2>
+                {this.props.children}
             </section>
 
         );
